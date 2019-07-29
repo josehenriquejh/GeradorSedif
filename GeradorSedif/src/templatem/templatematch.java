@@ -85,13 +85,13 @@ public class templatematch {
         System.out.println(matchLoc);
         
         // Save the visualized detection.
-        //System.out.println("Writing "+ "F:\\Samples\\Match.png");
+        //System.out.println("Writing "+ "E:\\Samples\\Match.png");
         DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy HHmmSss");
         Date date = new Date();
         String dat = dateFormat.format(date);
-        Imgcodecs.imwrite("F:\\Samples\\temp\\Match"+dat+" "+ getmatchLocX().toString() + " = X, " + getmatchLocY().toString() + " = Y, "  + ".png", tela);
-        Imgcodecs.imwrite("F:\\Samples\\Match.png", tela);
-        //Imgcodecs.imwrite("F:\\Samples\\Match.png", tela);
+        Imgcodecs.imwrite("E:\\Samples\\temp\\Match"+dat+" "+ getmatchLocX().toString() + " = X, " + getmatchLocY().toString() + " = Y, "  + ".png", tela);
+        Imgcodecs.imwrite("E:\\Samples\\Match.png", tela);
+        //Imgcodecs.imwrite("E:\\Samples\\Match.png", tela);
         
         }
     
@@ -141,15 +141,15 @@ public class templatematch {
         
         
         // Save the visualized detection.
-        //System.out.println("Writing "+ "F:\\Samples\\Match.png");
+        //System.out.println("Writing "+ "E:\\Samples\\Match.png");
         
         
         String comparado = infile2.replace("/","-").replace("\\","-").replace("."," ").replace(":", "");
         DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy HHmmSss");
         Date date = new Date();
         String dat = dateFormat.format(date);
-        Imgcodecs.imwrite("F:\\Samples\\temp\\Match"+dat+" "+ " ,X = "+ getmatchLocX().toString()  +" ,Y = " + getmatchLocY().toString() + " "+ comparado + ".png", tela);
-        Imgcodecs.imwrite("F:\\Samples\\Match.png", tela);
+        Imgcodecs.imwrite("E:\\Samples\\temp\\Match"+dat+" "+ " ,X = "+ getmatchLocX().toString()  +" ,Y = " + getmatchLocY().toString() + " "+ comparado + ".png", tela);
+        Imgcodecs.imwrite("E:\\Samples\\Match.png", tela);
         
         
         }

@@ -163,7 +163,7 @@ public class jfPrincipal extends java.lang.Thread{
 			{"WILSON DE PAULA LICO","151",""},
 			{"WILTON DE SOUZA LOPES","152",""},
 			{"WM TRANSP. DE PASSAGEIROS","153",""}};
-			static String template = "F:\\Samples\\template\\";
+			static String template = "E:\\Samples\\template\\";
 			
 public static void main(String[] args) throws Exception {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);  
@@ -185,12 +185,12 @@ public static void main(String[] args) throws Exception {
      	*/
 	
         public static void modulogerar() throws Exception{
-		if(teste2("F:\\Samples\\templatehome.png", 6, 26)){}
-		if(teste2("F:\\Samples\\templatehome1.png", 2,55)){
+		if(teste2("E:\\Samples\\templatehome.png", 6, 26)){}
+		if(teste2("E:\\Samples\\templatehome1.png", 2,55)){
 		seleciona(300,80);}
-		if(teste2("F:\\Samples\\templatedetalhar.png", 155, 76)){
+		if(teste2("E:\\Samples\\templatedetalhar.png", 155, 76)){
 		seleciona(70,434);}	
-		if (teste2("F:\\Samples\\templatenovo2.png", 697,139)){
+		if (teste2("E:\\Samples\\templatenovo2.png", 697,139)){
 		//seleciona(70,173);
 		selecionarEmpresa();
 		} else {
@@ -267,9 +267,9 @@ public static void main(String[] args) throws Exception {
 				}
 			}	    	
 	public static void modulotransmitir() throws Exception {
-		if(teste("F:\\Samples\\templatetransmitir1.png",208,52)){
+		if(teste("E:\\Samples\\templatetransmitir1.png",208,52)){
 		seleciona(279,79);	
-		if(teste("F:\\Samples\\template154x82y.png",154,80)){
+		if(teste("E:\\Samples\\template154x82y.png",154,80)){
 		//	seleciona(74,438);
 		//modulotransmitir2();
 		contribuinte();
@@ -278,7 +278,7 @@ public static void main(String[] args) throws Exception {
 	}	
 	public static void modulotransmitir2() throws Exception {			
 			Thread.sleep(3000);
-			if(teste2("F:\\Samples\\templatejatransmitido.png",178,346)){
+			if(teste2("E:\\Samples\\templatejatransmitido.png",178,346)){
 				seleciona(98,96);	
 				System.out.println("Transmitida, pulando para a pr�xima");
 				modulotransmitir2();
@@ -289,42 +289,42 @@ public static void main(String[] args) throws Exception {
 		}	
 	public static void modulotransmitir3() throws Exception{
 		System.out.println("modulo3");
-		if(teste("F:\\Samples\\templatetrocardetela.png", 3, 55)){
+		if(teste("E:\\Samples\\templatetrocardetela.png", 3, 55)){
 		seleciona(191,46);
 		modulotransmitir4();			
 		}
 	}	
 	public static void modulotransmitir4() throws Exception{
                 Thread.sleep(200);
-		if(teste2("F:\\Samples\\templategerar1.png", 12,62)){
+		if(teste2("E:\\Samples\\templategerar1.png", 12,62)){
 		seleciona(41,88);
 		Thread.sleep(4000);
 		seleciona(106,172);
 		Thread.sleep(10000);
-		if(teste("F:\\Samples\\templateassinar.png",378,316)){
+		if(teste("E:\\Samples\\templateassinar.png",378,316)){
 		seleciona(520,430);
 		}	
 		seleciona(532,453);
 		Thread.sleep(7000);
-		if(teste("F:\\Samples\\templatefinalizado4.png", 325,293)){
+		if(teste("E:\\Samples\\templatefinalizado4.png", 325,293)){
 		seleciona(648,400);}
 		modulotransmitir4();
-		} else if(teste2("F:\\Samples\\templategerar2.png", 92,62)){
+		} else if(teste2("E:\\Samples\\templategerar2.png", 92,62)){
 		seleciona(109,89);	
 		Thread.sleep(4000);
-		if(teste2("F:\\Samples\\templatetransmitirpendente.png",331,238)){
+		if(teste2("E:\\Samples\\templatetransmitirpendente.png",331,238)){
 		seleciona(98,172);
 		Thread.sleep(3000);
-		if(teste2("F:\\Samples\\templateidentificacao.png", 313,266)){
+		if(teste2("E:\\Samples\\templateidentificacao.png", 313,266)){
 		entry.entrada entrada = new entry.entrada();
 		entrada.digitar("LUIZINHOIPUA$");	
 		Thread.sleep(1000);
 		entrada.digitar("g9uzmap9ef$ ");
 		Thread.sleep(5000);
-		if(teste2("F:\\Samples\\templatefinalizado3.png",425,290)){
+		if(teste2("E:\\Samples\\templatefinalizado3.png",425,290)){
 		seleciona(510,408);}
 		//entrada.digitar("$");
-		if(teste("F:\\Samples\\templaterecibo.png", 573,20)){
+		if(teste("E:\\Samples\\templaterecibo.png", 573,20)){
 		seleciona(1007,42);
 		modulotransmitir5();}
 		} else {
@@ -337,13 +337,13 @@ public static void main(String[] args) throws Exception {
 		}
 	}
 	public static void modulotransmitir5() throws Exception{
-		if(teste("F:\\Samples\\templatefechar.png",16, 639)){
+		if(teste("E:\\Samples\\templatefechar.png",16, 639)){
 		seleciona(84,678);
 		Thread.sleep(1000);
 		seleciona(75,46); 
 		Thread.sleep(1000);
 		seleciona(279,82);
-		if(teste("F:\\Samples\\template154x82y.png",154,82)){
+		if(teste("E:\\Samples\\template154x82y.png",154,82)){
 		seleciona(74,684);
 		modulotransmitir();
 			}

@@ -142,7 +142,7 @@ public class testeLista extends javax.swing.JFrame {
             Logger.getLogger(testeLista.class.getName()).log(Level.SEVERE, null, ex);
         }
         try{
-        InputStream ExcelFileToRead = new FileInputStream("C:\\Lista de Empresas Teste.xlsx");
+        InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         
  

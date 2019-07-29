@@ -26,8 +26,8 @@ public class screen2image
         //Calendar now = Calendar.getInstance();
         Robot robot = new Robot();
         BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-        //ImageIO.write(screenShot, "PNG", new File("F:\\Samples\\temp\\" + formatter.format(now.getTime())+ ".png"));
-        //ImageIO.write(screenShot, "PNG", new File("F:\\Samples\\telaatual.png"));
+        //ImageIO.write(screenShot, "PNG", new File("E:\\Samples\\temp\\" + formatter.format(now.getTime())+ ".png"));
+        //ImageIO.write(screenShot, "PNG", new File("E:\\Samples\\telaatual.png"));
         //System.out.println(formatter.format(now.getTime()));
         tela = BufferedImage2Mat(screenShot);
         screenShot = null;

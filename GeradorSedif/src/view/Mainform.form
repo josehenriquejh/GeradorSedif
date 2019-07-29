@@ -108,7 +108,7 @@
     <Component class="javax.swing.JTextField" name="txt1">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
-        <Property name="text" type="java.lang.String" value="C:/Lista de Empresas Teste.xlsx (Caminho Padr&#xe3;o)"/>
+        <Property name="text" type="java.lang.String" value="E:/Lista de Empresas Teste.xlsx (Caminho Padr&#xe3;o)"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt1ActionPerformed"/>

@@ -28,7 +28,7 @@ public class Mainform extends javax.swing.JFrame {
     static screenshooter.screen2image screen2image = new screenshooter.screen2image();
     static entry.entrada entrada = new entry.entrada();
     static apachepoi.apachepoi apachepoi = new apachepoi.apachepoi();
-    static String template = "F:\\Samples\\template\\";
+    static String template = "E:\\Samples\\template\\";
 
     /**
      * Creates new form JFrame
@@ -75,7 +75,7 @@ public class Mainform extends javax.swing.JFrame {
         });
 
         txt1.setEditable(false);
-        txt1.setText("C:/Lista de Empresas Teste.xlsx (Caminho Padrão)");
+        txt1.setText("E:/Lista de Empresas Teste.xlsx (Caminho Padrão)");
         txt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt1ActionPerformed(evt);

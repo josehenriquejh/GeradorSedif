@@ -26,7 +26,7 @@ public class apachepoi {
 	/*
     public static void readXLSXFile() throws IOException
     {
-        InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+        InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         HSSFWorkbook  wb = new HSSFWorkbook(ExcelFileToRead);
         HSSFWorkbook test = new HSSFWorkbook(); 
         HSSFSheet sheet = wb.getSheetAt(0);
@@ -61,7 +61,7 @@ public class apachepoi {
     //mes, ano, numero do id da empresa no excel
     
     public static int getlines() throws Exception{
-        InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+        InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         XSSFRow row;
         XSSFCell cell;
@@ -89,14 +89,14 @@ public class apachepoi {
     
     
     public static String getdata(int m, int a, int idempresa) throws Exception{
-    	InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+    	InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         
         return (wb.getSheetAt(0).getRow(idempresa+1).getCell(((a - 2016)*12) + m + 5)).toString();
     }
     
     public void setdata(int m, int a, int idempresa) throws Exception{
-    	InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+    	InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         XSSFSheet sheet = wb.getSheetAt(0);
         
@@ -112,7 +112,7 @@ public class apachepoi {
 
         //cell.setCellFormula("");
         
-        try (FileOutputStream fos = new FileOutputStream("F:\\Lista de Empresas Teste.xlsx")) {
+        try (FileOutputStream fos = new FileOutputStream("E:\\Lista de Empresas Teste.xlsx")) {
             wb.write(fos);
         }
     }
@@ -127,7 +127,7 @@ public class apachepoi {
     }
    
         public static String consultarempresa() throws Exception{
-        InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+        InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         
         return (wb.getSheetAt(0).getRow(0).getCell(0)).toString();
@@ -135,21 +135,21 @@ public class apachepoi {
     }
         
         public static int consultarcnpj() throws Exception{
-        InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+        InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         
         return (int) (wb.getSheetAt(0).getRow(0).getCell(1)).getNumericCellValue();
    
     }
         public static int consultarcpf() throws Exception{
-        InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.x");
+        InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.x");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         
         return (int) (wb.getSheetAt(0).getRow(0).getCell(2)).getNumericCellValue();
    
     }
         public int consultarcodigo() throws Exception{
-        InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+        InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
         XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
         
         return (int) (wb.getSheetAt(0).getRow(0).getCell(3)).getNumericCellValue();
@@ -159,7 +159,7 @@ public class apachepoi {
        ArrayList<empresa> resultado = new ArrayList<>();
        // formatter = new DataFormatter();ArrayList<String> a = new ArrayList<String>()
 
-       InputStream ExcelFileToRead = new FileInputStream("F:\\Lista de Empresas Teste.xlsx");
+       InputStream ExcelFileToRead = new FileInputStream("E:\\Lista de Empresas Teste.xlsx");
        XSSFWorkbook  wb = new XSSFWorkbook(ExcelFileToRead);
        XSSFRow row;
        XSSFSheet sheet = wb.getSheetAt(0);
