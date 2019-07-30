@@ -83,16 +83,8 @@ public class templatematch {
         
         
         System.out.println(matchLoc);
-        
-        // Save the visualized detection.
-        //System.out.println("Writing "+ "E:\\Samples\\Match.png");
-        DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy HHmmSss");
-        Date date = new Date();
-        String dat = dateFormat.format(date);
-        Imgcodecs.imwrite("E:\\Samples\\temp\\Match"+dat+" "+ getmatchLocX().toString() + " = X, " + getmatchLocY().toString() + " = Y, "  + ".png", tela);
-        Imgcodecs.imwrite("E:\\Samples\\Match.png", tela);
-        //Imgcodecs.imwrite("E:\\Samples\\Match.png", tela);
-        
+        salvamatch(infile2, tela);
+       
         }
     
     	public void templatematch1(String infile2){
@@ -138,23 +130,24 @@ public class templatematch {
         
       
         System.out.println(matchLoc);
-        
+            salvamatch(infile2, tela);
         
         // Save the visualized detection.
         //System.out.println("Writing "+ "E:\\Samples\\Match.png");
-        
-        
-        String comparado = infile2.replace("/","-").replace("\\","-").replace("."," ").replace(":", "");
-        DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy HHmmSss");
-        Date date = new Date();
-        String dat = dateFormat.format(date);
-        Imgcodecs.imwrite("E:\\Samples\\temp\\Match"+dat+" "+ " ,X = "+ getmatchLocX().toString()  +" ,Y = " + getmatchLocY().toString() + " "+ comparado + ".png", tela);
-        Imgcodecs.imwrite("E:\\Samples\\Match.png", tela);
-        
-        
+       
+            
         }
-    
-    
+   //salva as comparacoes de template em uma pasta temp 
+   public void salvamatch(String infile2, Mat tela){
+   String comparado = infile2.replace("/","-").replace("\\","-").replace("."," ").replace(":", "");
+   DateFormat dateFormat = new SimpleDateFormat("ddMMyyyy HHmmSss");
+   Date date = new Date();
+   String dat = dateFormat.format(date);
+   Imgcodecs.imwrite("E:\\Samples\\temp\\Match"+dat+" "+ " ,X = "+ getmatchLocX().toString()  +" ,Y = " + getmatchLocY().toString() + " "+ comparado + ".png", tela);
+   Imgcodecs.imwrite("E:\\Samples\\Match.png", tela);
+   } 
+        
+        
     public Point getmatchLoc(){
     	Point matchLoc1 = this.matchLoc;
     	
