@@ -24,7 +24,7 @@ public class templatematch {
     boolean use_mask = false;
     Point matchLoc;
     int match_method;
-    
+    Core.MinMaxLocResult mmr;
     
     
     
@@ -67,9 +67,9 @@ public class templatematch {
         // / Do the Matching and Normalize
         Imgproc.matchTemplate(tela, templ, result, match_method);
         Core.normalize(result, result, 0, 1, Core.NORM_MINMAX, -1, new Mat());
-
+        
         // / Localizing the best match with minMaxLoc
-        Core.MinMaxLocResult mmr = Core.minMaxLoc(result);
+        mmr = Core.minMaxLoc(result);
 
         
         if (match_method == Imgproc.TM_SQDIFF || match_method == Imgproc.TM_SQDIFF_NORMED) {
@@ -107,9 +107,16 @@ public class templatematch {
         Core.normalize(result, result, 0, 1, Core.NORM_MINMAX, -1, new Mat());
 
         // / Localizing the best match with minMaxLoc
-        Core.MinMaxLocResult mmr = Core.minMaxLoc(result);
-
+        mmr = Core.minMaxLoc(result);
         
+        //    System.out.println("matchloc="+matchLoc);
+        //    System.out.println("minloc="+mmr.minLoc);
+        //    System.out.println("maxloc="+mmr.maxLoc);
+        //    System.out.println("maxval="+mmr.maxVal);
+        //    System.out.println("minval="+mmr.minVal);
+        
+        Core.minMaxLoc(result);
+            System.out.println("");
         if (match_method == Imgproc.TM_SQDIFF || match_method == Imgproc.TM_SQDIFF_NORMED) {
             matchLoc = mmr.minLoc;
         } else {
@@ -119,6 +126,7 @@ public class templatematch {
         //int resox = tela.cols();
         //int resoy = tela.rows();
         //System.out.println("Resolucao: " +resox+"x"+resoy);
+       
         
         //  Show me what you got
         Imgproc.rectangle(tela, matchLoc, new Point(matchLoc.x + templ.cols(),
@@ -159,6 +167,13 @@ public class templatematch {
     
     public Integer getmatchLocY(){
     	return (int) Math.round(matchLoc.y);
+    }
+    
+    public Double getmaxval(){
+     //método para retornar a porcentagem de validade do templatematching, 
+     //para saber se a imagem esta valida,
+     //ou foi apenas a melhor correspondencia falsa   
+        return mmr.maxVal;
     }
     
     }

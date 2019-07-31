@@ -186,8 +186,21 @@ public class jfPrincipal extends java.lang.Thread {
      */
 
     public static void modulogerar1() throws Exception {
-        testematch("botaoabrir.png");
-      
+        if (teste2(template+"botaoabrir.png",260,56)){
+            //System.out.println("A porcentagem é "+temp.getmaxval()*100+"%");    
+        seleciona(309,77);}
+        if (teste2(template+"templatedetalhar.png",159,77)){
+        seleciona(70,434);
+        }
+        if (teste2(template+"templatenovodeclaracao.png",650,141)){
+        selecionarEmpresa1();
+        }
+        else {
+            modulogerar1();
+        }
+    }
+    public static void selecionarEmpresa1(){
+    
     }
 
     public static void modulogerar() throws Exception {
@@ -397,6 +410,8 @@ public class jfPrincipal extends java.lang.Thread {
     public static boolean teste(String infile1, int x, int y) throws Exception {
         screen2image.robo();
         temp.templatematch1(infile1);
+        if(temp.getmaxval()<0.99){
+        return false;}
         System.out.println("comparando " + infile1);
         if (temp.getmatchLoc().equals(new Point(x, y))) {
 
@@ -416,6 +431,8 @@ public class jfPrincipal extends java.lang.Thread {
     public static boolean teste2(String infile1, int x, int y) throws Exception {
         screen2image.robo();
         temp.templatematch1(infile1);
+        if(temp.getmaxval()<0.99){
+        return false;}
         System.out.println("comparando " + infile1);
         if (temp.getmatchLoc().equals(new Point(x, y))) {
 
@@ -435,6 +452,8 @@ public class jfPrincipal extends java.lang.Thread {
     public static boolean teste3(String infile1, int x, int y, int cordx, int cordy) throws Exception {
         screen2image.robo();
         temp.templatematch1(infile1);
+        if(temp.getmaxval()<0.99){
+        return false;}
         System.out.println("comparando " + infile1);
         if (temp.getmatchLoc().equals(new Point(x, y))) {
             System.out.println("condição teste 3");
@@ -454,6 +473,8 @@ public class jfPrincipal extends java.lang.Thread {
     public static boolean teste4(String infile1, int x, int y, int cordx, int cordy) throws Exception {
         screen2image.robo();
         temp.templatematch1(infile1);
+        if(temp.getmaxval()<0.99){
+        return false;}
         System.out.println("comparando " + infile1);
         if (temp.getmatchLoc().equals(new Point(x, y))) {
 
@@ -511,6 +532,8 @@ public class jfPrincipal extends java.lang.Thread {
         } catch (Exception e) {
         }
         temp.templatematch1(infile);
+        if(temp.getmaxval()<0.99){
+        return false;}
         if (temp.getmatchLoc().equals(new Point(x, y))) {
             return true;
         } else {
