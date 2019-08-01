@@ -23,15 +23,16 @@ public class empresa {
     private String cnpj;
     private String cpf;
     private String codigo;
-    
+    private String ie;
     public empresa() {
     }
     
-    public empresa(String nome, String cnpj,String cpf, String codigo){
+    public empresa(String nome, String cnpj,String cpf, String codigo, String ie){
     this.nome = nome;
     this.cnpj = cnpj;
     this.cpf = cpf;
     this.codigo = codigo;
+    this.ie = ie;
         }
 
     public String getCnpj() {
@@ -49,6 +50,9 @@ public class empresa {
     public String getNome() {
         return nome;
     }
+    
+    public String getIE(){
+        return ie;}
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
@@ -62,6 +66,10 @@ public class empresa {
         this.cpf = cpf;
     }
 
+     public void setIE(String ie) {
+        this.ie = ie;
+    }
+     
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -83,5 +91,7 @@ public class empresa {
         return formatter.formatCellValue(wb.getSheetAt(0).getRow(i).getCell(3));
     }
     
-    
+    public String getIE(int i,XSSFWorkbook wb) throws Exception{ 
+        return formatter.formatCellValue(wb.getSheetAt(0).getRow(i).getCell(4));
+    }
 }

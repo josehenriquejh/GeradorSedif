@@ -189,6 +189,7 @@ public class apachepoi {
             e.setCnpj(String.valueOf(wb.getSheetAt(0).getRow(1).getCell(1)));
             e.setCodigo(String.valueOf(wb.getSheetAt(0).getRow(1).getCell(2)));
             e.setCpf(String.valueOf(wb.getSheetAt(0).getRow(1).getCell(3)));
+            e.setIE(String.valueOf(wb.getSheetAt(0).getRow(1).getCell(4)));
             resultado.add(e);
             
               if (cell.toString().trim().isEmpty()) {

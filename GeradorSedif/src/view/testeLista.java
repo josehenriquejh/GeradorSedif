@@ -51,6 +51,10 @@ public class testeLista extends javax.swing.JFrame {
         mask.setValueContainsLiteralCharacters(false);
         return mask.valueToString(x);}  
     
+     public static String formatie(String x) throws ParseException {  
+        MaskFormatter mask = new MaskFormatter("###.###.###.###");
+        mask.setValueContainsLiteralCharacters(false);
+        return mask.valueToString(x);}  
     
     /**
      * Creates new form testeLista
@@ -89,6 +93,7 @@ public class testeLista extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        tbConsultar.setCellSelectionEnabled(true);
         jScrollPane1.setViewportView(tbConsultar);
 
         jButton1.setText("Consultar Lista de Empresas");
@@ -157,7 +162,9 @@ public class testeLista extends javax.swing.JFrame {
                 m.addRow(new Object []{(e.getNome(i,wb)),
                     formatcnpj(e.getCnpj(i,wb)),
                     formatcpf(e.getCpf(i,wb)),
-                    (e.getCodigo(i,wb))});
+                    (e.getCodigo(i,wb)),
+                    formatie(e.getIE(i,wb))
+                });
                 } catch (Exception ex){
                     Logger.getLogger(testeLista.class.getName()).log(Level.SEVERE, null, ex);                }
             }
@@ -235,6 +242,7 @@ public class testeLista extends javax.swing.JFrame {
         m.addColumn("CNPJ");
         m.addColumn("CPF");
         m.addColumn("Codigo");
+        m.addColumn("I.E.");
         tbConsultar.setModel(m);
      }
     
