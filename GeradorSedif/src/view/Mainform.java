@@ -9,6 +9,7 @@ package view;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -200,8 +201,13 @@ public class Mainform extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         try{
-        jfPrincipal.maximizasedif();
-        jfPrincipal.modulogerar1();}
+          for (int i = 0; i < 11; i++)
+          {entrada.digitar(Arrays.toString(jfPrincipal.empresas[i]));
+          }
+        
+//        jfPrincipal.maximizasedif();
+//        jfPrincipal.modulogerar1();
+        }
         catch (Exception e){}
         
     }//GEN-LAST:event_jButton2ActionPerformed

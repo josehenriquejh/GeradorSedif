@@ -10,6 +10,27 @@ public class jfPrincipal extends java.lang.Thread {
     static entry.entrada entrada = new entry.entrada();
     static apachepoi.apachepoi apachepoi = new apachepoi.apachepoi();
 
+    
+    static String[][] empresas1 = {
+{"SOUZA & TAZINAFO"},
+{"SUELAINE APARECIDA FORTUNATO"},
+{"TATIANE SCARDILLI DA SILVA"},
+{"TELES & AZEVEDO"},
+{"THIAGO PEREIRA CAETANO"},
+{"UESLEI ANDRADE"},
+{"VERA LUCIA FERREIRA"},
+{"VERA LUCIA ANGELO"},
+{"VINICIUS DE SOUZA FORTUNATO"},
+{"VITOR FRESSATTI ROCHA"},
+{"W. FERREIRA DE OLIVEIRA"},
+{"WELLINGTON CARLOS DIAS"},
+{"WELLINGTON LEITE SILVA"},
+{"WILLIAN BARDAO AGUIAR"},
+{"WILSON DE PAULA LICO"},
+{"WILTON DE SOUZA LOPES"},
+{"WM TRANSP. DE PASSAGEIROS"},
+};
+    
     static String[][] empresas = {
         {"A ROBERTO FRESSATTI", "001", "012016"},
         {"ACADEMIA DE GINASTICA", "002", ""},
@@ -164,7 +185,9 @@ public class jfPrincipal extends java.lang.Thread {
         {"WILSON DE PAULA LICO", "151", ""},
         {"WILTON DE SOUZA LOPES", "152", ""},
         {"WM TRANSP. DE PASSAGEIROS", "153", ""}};
+    
     static String template = "E:\\Samples\\template\\";
+    
 
     public static void main(String[] args) throws Exception {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
